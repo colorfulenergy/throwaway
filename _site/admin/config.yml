@@ -11,9 +11,10 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "custom name", name: "size", widget: "string", default: "size"}
-      - {label: "custom options", name: "custom options", widget: "string", default: "Small|Medium|Large"}
+      - {label: "custom name", name: "custom-name", widget: "string", default: "size"}
+      - {label: "custom options", name: "custom-options", widget: "string", default: "Small|Medium|Large"}
       - {label: "product id", name: "id", widget: "string"}
+      - {label: "product url", name: "url", widget: "string"}
       - {label: "product name", name: "name", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
