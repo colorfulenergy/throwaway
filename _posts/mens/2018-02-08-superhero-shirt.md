@@ -11,4 +11,5 @@ categories: mens-clothes
 main: true
 type: shirt
 layout: products
+thumbnail: img/superhero.jpg
 ---

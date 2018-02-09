@@ -11,4 +11,5 @@ categories: mens-sweater
 main: true
 type: woolen-sweater
 layout: products
+thumbnail: img/yellow-woolen-sweater.jpg
 ---

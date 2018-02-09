@@ -10,4 +10,5 @@ date: 2017-2-8 4:51:01 -08:00
 categories: mens-shoe
 main: false
 type: type1
+thumbnail: img/orange-shoe.jpg
 ---

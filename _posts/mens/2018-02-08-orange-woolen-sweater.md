@@ -10,4 +10,5 @@ date: 2017-2-8 4:51:01 -08:00
 categories: mens-sweater
 main: false
 type: woolen-sweater
+thumbnail: img/orange-woolen-sweater.jpg
 ---
