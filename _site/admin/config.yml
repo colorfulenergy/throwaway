@@ -6,7 +6,7 @@ media_folder: "img"
 
 collections:
   - name: "mens-varieties" # Used in routes, e.g., /admin/collections/blog
-    label: "men clothes" # Used in the UI
+    label: "men varieties clothes" # Used in the UI
     folder: "_posts/mens/other-varieties" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -19,14 +19,14 @@ collections:
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: mens or womens, name: "categories", widget: "select", options: ["mens-clothes", "women-clothes"]}
+      - {label: mens or womens, name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "boolean", default: false}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
 
   - name: "mens-main" # Used in routes, e.g., /admin/collections/blog
-    label: "men clothes" # Used in the UI
-    folder: "_posts/mens/other-varieties" # The path to the folder where the documents are stored
+    label: "men main clothes" # Used in the UI
+    folder: "_posts/mens/main-item" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -38,7 +38,7 @@ collections:
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: mens or womens, name: "categories", widget: "select", options: ["mens-clothes", "women-clothes"]}
+      - {label: mens or womens, name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "boolean", default: true}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "string", default: "products"}
