@@ -1,0 +1,84 @@
+---
+layout: default
+---
+<!-- container -->
+<div class="container">
+  <!-- header -->
+  <header>
+    {% include nav.html %}
+    <!-- hero image -->
+    <div class="header__hero">
+      <div>
+        <h3>
+          Made <br>
+          For <br>
+          The <br>
+          <span>Nibba</span>
+        </h3>
+        <p>
+          <a href="https://colorlessenergy.github.io" class="button">Giv Me Money</a>
+        </p>
+      </div>
+    </div>
+  </header>
+  <!-- main -->
+  <main>
+    <!-- shop container -->
+    <div class="shop">
+      {% for data in site.data.shop %}
+        <div>
+          <img src="{{site.baseurl}}/img/{{data.source}}" alt="{{data.alt}}">
+          <p>{{data.p}}</p>
+          <div class="shop__btn">
+            <a href="{{ site.baseurl }}/{{data.link}}">SHOP NOW!</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <!-- category container -->
+    <div class="category">
+      <h3>SHOP NOW!</h3>
+      <div class="category__container">
+        <div class="category__links">
+          <h4>MENS</h4>
+          {% for data in site.data.category-men %}
+            <p><a href="{{ site.baseurl }}/{{data.link}}">{{data.p}}</a></p>
+          {% endfor %}
+        </div>
+        <div class="category__links">
+          <h4>WOMENS</h4>
+          {% for data in site.data.category-women %}
+            <p><a href="{{ site.baseurl }}/{{data.link}}">{{data.p}}</a></p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- blog container -->
+    <div class="blog">
+      <div class="blog__header">
+        <p>stay in the know</p>
+        <h3>Latest Store News</h3>
+      </div>
+      <div class="blog__container">
+        {% for post in site.categories['blog'] %}
+          <div>
+            <img src="{{site.baseurl}}/img/{{post.imgSource}}" alt="{{post.imgAlt}}">
+            <p>{{post.meta}}</p>
+            <div class="blog__btn">
+              <a href="{{ site.baseurl }}/{{post.source}}">READ MORE</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="blog__button">
+        <p>
+          <a href="https://google.com">SEE MORE!</a>
+        </p>
+      </div>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer>
+    {% include footer.html %}
+  </footer>
+</div>

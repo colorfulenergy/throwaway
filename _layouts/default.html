@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clothing Shop</title>
+  <link rel="stylesheet" href="{{site.baseurl}}/css/base.css">
+  <link rel="stylesheet" href="{{site.baseurl}}/css/module.css">
+  <link rel="stylesheet" href="{{site.baseurl}}/css/layout.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+  <!-- snipcart and styles -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+  <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="MTMxM2JjYmMtYmIyNi00OTEzLThhOWItOWQ0Mjg0NDU1MTliNjM2NDYxMTc5MDAzNzUxOTc3"></script>
+
+  <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+
+  {% if page.url == '/' %}
+    <script src="{{site.baseurl}}/responsive-nav.js" defer></script>
+  {% else %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/main.css">
+    <script src="{{site.baseurl}}/main.js" defer></script>
+  {% endif %}
+
+
+</head>
+<body>
+  {% include cart.html %}
+  {{content}}
+</body>
+</html>

@@ -1,0 +1,16 @@
+---
+layout: all-products
+---
+
+<!-- loops through all the post with the categories of shoe -->
+
+{% for post in site.categories['mens-shoe'] %}
+  {% if post.main == true %}
+    <img src="{{ post.pic-url }}" alt="">
+
+    <p>${{ post.price }}</p>
+    <h4>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
+    </h4>
+  {% endif %}
+{% endfor %}

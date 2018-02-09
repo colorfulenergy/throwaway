@@ -1,0 +1,25 @@
+<!-- Loop through all the post and pull the name of the current product -->
+
+<ul>
+  <li><a href="{{site.baseurl}}/">Shop</a></li>
+  {% if page.url contains 'mens-clothes' %}
+  <li><a href="{{site.baseurl}}/mens-clothes.html">Mens clothes</a></li>
+  {% elsif page.url contains 'mens-shoes' %}
+  <li><a href="{{site.baseurl}}/mens-shoes.html">Mens shoes</a></li>
+  {% elsif page.url contains 'mens-sweater' %}
+  <li><a href="{{site.baseurl}}/mens-sweater.html">Mens Sweaters</a></li>
+  {% elsif page.url contains 'women-clothes' %}
+  <li><a href="{{site.baseurl}}/women-clothes.html">Women clothes</a></li>
+  {% elsif page.url contains 'women-shoes' %}
+  <li><a href="{{site.baseurl}}/women-shoes.html">Women shoes</a></li>
+  {% elsif page.url contains 'women-sweater' %}
+  <li><a href="{{site.baseurl}}/women-sweater.html">Women Sweaters</a></li>
+  {% endif %}
+  {% for post in site.posts %}
+  {% if post.main == true %}
+   {% if page.url contains post.type %}
+   <li><a href="{{ site.baseurl }}{{ page.url }}">{{ post.type }}</a></li>
+    {% endif %}
+  {% endif %}
+  {% endfor %}
+</ul>
