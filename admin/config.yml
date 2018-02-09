@@ -1,0 +1,23 @@
+backend:
+  name: colorfulenergy/throwaway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "img" # Media files will be stored in the repo under images/uploads
+
+collections:
+  - name: "mens/clothes" # Used in routes, e.g., /admin/collections/blog
+    label: "men clothes" # Used in the UI
+    folder: "_posts/mens/clothes" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "custom name", name: "size", widget: "string", default: "size"}
+      - {label: "custom options", name: "custom options", widget: "string", default: "Small|Medium|Large"}
+      - {label: "product id", name: "id", widget: "string"}
+      - {label: "product name", name: "name", widget: "string"}
+      - {label: "product price", name: "price", widget: "number"}
+      - {label: "product image", name: "pic-url", widget: "image"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: mens or womens, name: "categories", widget: "select", options: ["mens-clothes", "women-clothes"]}
+      - {label: "is it a main product", name: "main", widget: "boolean", default: false}
+      - {label: "the products type", name: "type", widget: "string"}
