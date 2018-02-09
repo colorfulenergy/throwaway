@@ -1,2 +1,2 @@
-baseurl: /throwaway
+baseurl: /
 exclude: ['README.md']
