@@ -1,8 +1,8 @@
 backend:
-  name: colorfulenergy/throwaway
-  branch: master # Branch to update (optional; defaults to master)
+  name: github
+  repo: colorfulenergy/throwaway # Path to your Github repository
 
-media_folder: "img" # Media files will be stored in the repo under images/uploads
+media_folder: "img" 
 
 collections:
   - name: "mens/clothes" # Used in routes, e.g., /admin/collections/blog
