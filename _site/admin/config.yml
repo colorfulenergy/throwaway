@@ -2,12 +2,12 @@ backend:
   name: github
   repo: colorfulenergy/throwaway # Path to your Github repository
 
-media_folder: "img" 
+media_folder: "img"
 
 collections:
-  - name: "mens/clothes" # Used in routes, e.g., /admin/collections/blog
+  - name: "mens" # Used in routes, e.g., /admin/collections/blog
     label: "men clothes" # Used in the UI
-    folder: "_posts/mens/clothes" # The path to the folder where the documents are stored
+    folder: "_posts/mens" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
