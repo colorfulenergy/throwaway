@@ -6,7 +6,7 @@ layout: all-products
 
 {% for post in site.categories['mens-clothes'] %}
   {% if post.main == true %}
-    <img src="{{ post.pic-url }}" alt="">
+    <img src="{{ post.pic-url }}" alt="{{ post.title }}">
 
     <p>${{ post.price }}</p>
     <h4>

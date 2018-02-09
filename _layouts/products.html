@@ -10,7 +10,7 @@ layout: default
 <div>
     {% for post in site.posts %}
      {% if page.url contains post.type %}
-        <img src="{{site.baseurl}}/{{ post.pic-url }}" alt="{{ post.title }}">
+        <img src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
         {% endif %}
     {% endfor %}
 </div>
@@ -21,7 +21,7 @@ layout: default
 {% for post in site.posts %}
      {% if post.main == true %}
         {% if page.url contains post.type %}
-            <img id="big-img" src="{{site.baseurl}}/{{ post.pic-url }}" alt="">
+            <img id="big-img" src="{{site.baseurl}}{{ post.pic-url }}" alt="">
             <p>${{ post.price }}</p>
             <h2>{{ post.type }}</h2>
         {% endif %}
