@@ -41,5 +41,5 @@ collections:
       - {label: mens or womens, name: "categories", widget: "select", options: ["mens-clothes", "women-clothes"]}
       - {label: "is it a main product", name: "main", widget: "boolean", default: true}
       - {label: "the products type", name: "type", widget: "string"}
-      - {label: "the products layout", name: "layout", widget: "string" default: "products"}
+      - {label: "the products layout", name: "layout", widget: "string", default: "products"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
