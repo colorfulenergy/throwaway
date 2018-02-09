@@ -10,7 +10,7 @@ layout: default
 <div>
     {% for post in site.posts %}
      {% if page.url contains post.type %}
-        <img src="{{site.baseurl}}/{{ post.pic-url }}" alt="{{ post.name }}">
+        <img src="{{site.baseurl}}/{{ post.pic-url }}" alt="{{ post.title }}">
         {% endif %}
     {% endfor %}
 </div>
@@ -55,7 +55,7 @@ layout: default
 {% endif %}
 <button id="{% if main_true %}my-button{% endif %}" data-item-custom2-name="{{ post.custom-name }}"
     data-item-custom2-options="{{ post.custom-options }}" class="snipcart-add-item {% if main_true %}active{% endif %}"
-    data-item-id="{{ post.id }}" data-item-url="{{ post.url }}" data-item-name="{{ post.name }}" data-item-price="{{ post.price }}"
+    data-item-id="{{ post.id }}" data-item-url="{{ post.url }}" data-item-name="{{ post.title }}" data-item-price="{{ post.price }}"
     data-item-image="{{site.baseurl}}/{{ post.pic-url }}" data-item-quantity="1">
     Buy now
 </button>
