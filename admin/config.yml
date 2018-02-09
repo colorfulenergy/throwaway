@@ -5,38 +5,19 @@ backend:
 media_folder: "img"
 
 collections:
-  - name: "mens-varieties" # Used in routes, e.g., /admin/collections/blog
-    label: "men varieties clothes" # Used in the UI
-    folder: "_posts/mens/other-varieties" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "custom name", name: "custom-name", widget: "string", default: "size"}
-      - {label: "custom options", name: "custom-options", widget: "string", default: "Small|Medium|Large"}
-      - {label: "product id", name: "id", widget: "string"}
-      - {label: "product url", name: "url", widget: "string"}
-      - {label: "product name", name: "name", widget: "string"}
-      - {label: "product price", name: "price", widget: "number"}
-      - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
-      - {label: "is it a main product", name: "main", widget: "boolean", default: false}
-      - {label: "the products type", name: "type", widget: "string"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-
   - name: "mens-main" # Used in routes, e.g., /admin/collections/blog
     label: "men main clothes" # Used in the UI
     folder: "_posts/mens/main-item" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "custom name", name: "custom-name", widget: "string", default: "size"}
-      - {label: "custom options", name: "custom-options", widget: "string", default: "Small|Medium|Large"}
+      - {label: "custom name", name: "customname", widget: "string", default: "size"}
+      - {label: "custom options", name: "customoptions", widget: "string", default: "Small|Medium|Large"}
       - {label: "product id", name: "id", widget: "string"}
       - {label: "product url", name: "url", widget: "string"}
-      - {label: "product name", name: "name", widget: "string"}
+      - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
-      - {label: "product image", name: "pic-url", widget: "image"}
+      - {label: "product image", name: "picurl", widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "boolean", default: true}
