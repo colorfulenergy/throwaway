@@ -43,3 +43,42 @@ collections:
       - {label: "is it a main product", name: "main", widget: "boolean", default: false}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+
+  - name: "womens-main" # Used in routes, e.g., /admin/collections/blog
+    label: "womens main clothes" # Used in the UI
+    folder: "_posts/womens/womens-main-item" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "custom name", name: "custom-name", widget: "string", default: "size"}
+      - {label: "custom options", name: "custom-options", widget: "string", default: "Small|Medium|Large"}
+      - {label: "product id", name: "id", widget: "string"}
+      - {label: "product url", name: "url", widget: "string"}
+      - {label: "product name", name: "title", widget: "string"}
+      - {label: "product price", name: "price", widget: "number"}
+      - {label: "product image", name: "pic-url", widget: "image"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "mens or womens", name: "categories", widget: "select", options: ["women-clothes", "women-shoe", "women-sweater"]}
+      - {label: "is it a main product", name: "main", widget: "boolean", default: true}
+      - {label: "the products type", name: "type", widget: "string"}
+      - {label: "the products layout", name: "layout", widget: "string", default: "products"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+
+  - name: "womens-variety" # Used in routes, e.g., /admin/collections/blog
+    label: "womens varities clothes" # Used in the UI
+    folder: "_posts/womens/womens-other-varieties" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "custom name", name: "custom-name", widget: "string", default: "size"}
+      - {label: "custom options", name: "custom-options", widget: "string", default: "Small|Medium|Large"}
+      - {label: "product id", name: "id", widget: "string"}
+      - {label: "product url", name: "url", widget: "string"}
+      - {label: "product name", name: "title", widget: "string"}
+      - {label: "product price", name: "price", widget: "number"}
+      - {label: "product image", name: "pic-url", widget: "image"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "mens or womens", name: "categories", widget: "select", options: ["women-clothes", "women-shoe", "women-sweater"]}
+      - {label: "is it a main product", name: "main", widget: "boolean", default: false}
+      - {label: "the products type", name: "type", widget: "string"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
