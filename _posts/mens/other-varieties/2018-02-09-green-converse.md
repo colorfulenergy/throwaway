@@ -1,7 +1,7 @@
 ---
 custom-name: size
 custom-options: 6|7|8|9
-id: shoe_green
+custom-id: shoe_green
 url: /
 title: green converse
 price: '20.00'

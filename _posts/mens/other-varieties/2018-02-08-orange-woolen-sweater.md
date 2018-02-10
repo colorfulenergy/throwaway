@@ -1,7 +1,7 @@
 ---
 custom-name: size
 custom-options: Small|Medium|Large
-id: Sweater_ORANGE
+custom-id: Sweater_ORANGE
 url: /
 title: orange woolen sweater
 price: '20.00'

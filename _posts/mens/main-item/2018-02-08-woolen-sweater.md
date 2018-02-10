@@ -1,7 +1,7 @@
 ---
 custom-name: size
 custom-options: Small|Medium|Large
-id: Sweater_YELLOW
+custom-id: Sweater_YELLOW
 url: /
 title: yellow woolen sweater
 price: '20.00'

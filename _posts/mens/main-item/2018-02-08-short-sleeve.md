@@ -1,7 +1,7 @@
 ---
 custom-name: size
 custom-options: Small|Medium|Large
-id: short_sleeve_BLACK
+custom-id: short_sleeve_BLACK
 url: /
 title: short sleeve shirt
 price: '20.00'

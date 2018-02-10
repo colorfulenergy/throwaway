@@ -1,7 +1,7 @@
 ---
 custom-name: size
 custom-options: Small|Medium|Large
-id: long-sleeve_PINK
+custom-id: long-sleeve_PINK
 url: /
 title: pink
 price: '20.00'
