@@ -6,7 +6,7 @@ layout: all-products
   <div class="display-shop">
     {% for post in site.categories['mens-clothes'] %}
       {% if post.main == true %}
-        <div>
+        <div class="all-products__div">
           <a href="{{ site.baseurl }}{{ post.url }}">
             <img src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
 
@@ -24,7 +24,7 @@ layout: all-products
   <div class="display-shop">
     {% for post in site.categories['mens-shoe'] %}
       {% if post.main == true %}
-      <div>
+      <div class="all-products__div">
         <a href="{{ site.baseurl }}{{ post.url }}">
           <img src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
 
@@ -42,7 +42,7 @@ layout: all-products
   <div class="display-shop">
     {% for post in site.categories['mens-sweater'] %}
       {% if post.main == true %}
-      <div>
+      <div class="all-products__div">
         <a href="{{ site.baseurl }}{{ post.url }}">
           <img src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
 

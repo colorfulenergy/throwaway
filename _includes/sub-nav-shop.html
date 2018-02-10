@@ -2,18 +2,22 @@
 
 <ul class="sub-nav">
   <li><a href="{{site.baseurl}}/">Shop</a></li>
-  {% if page.url contains 'mens-clothes' %}
+  {% if page.url contains 'mens-shop' %}
+  <li><a href="{{site.baseurl}}/mens-shop.html">Mens Shop</a></li>
+  {% elsif page.url contains 'mens-clothes' %}
   <li><a href="{{site.baseurl}}/mens-clothes.html">Mens clothes</a></li>
   {% elsif page.url contains 'mens-shoe' %}
   <li><a href="{{site.baseurl}}/mens-shoes.html">Mens shoes</a></li>
   {% elsif page.url contains 'mens-sweater' %}
   <li><a href="{{site.baseurl}}/mens-sweater.html">Mens Sweaters</a></li>
+  {% elsif page.url contains 'women-shop' %}
+  <li><a href="{{site.baseurl}}/women-shop.html">Womens Shop</a></li>
   {% elsif page.url contains 'women-clothes' %}
-  <li><a href="{{site.baseurl}}/women-clothes.html">Women clothes</a></li>
+  <li><a href="{{site.baseurl}}/women-clothes.html">Womens clothes</a></li>
   {% elsif page.url contains 'women-shoes' %}
-  <li><a href="{{site.baseurl}}/women-shoes.html">Women shoes</a></li>
+  <li><a href="{{site.baseurl}}/women-shoes.html">Womens shoes</a></li>
   {% elsif page.url contains 'women-sweater' %}
-  <li><a href="{{site.baseurl}}/women-sweater.html">Women Sweaters</a></li>
+  <li><a href="{{site.baseurl}}/women-sweater.html">Womens Sweaters</a></li>
   {% endif %}
   {% for post in site.posts %}
   {% if post.main == true %}

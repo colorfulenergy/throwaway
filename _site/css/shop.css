@@ -12,6 +12,7 @@
 
 .display-shop > div {
   height: 500px;
+  width: auto;
 }
 
 .display-shop img {

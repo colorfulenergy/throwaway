@@ -1,10 +1,16 @@
 $('#my-size').change(function () {
-    alert("runned")
     $('#my-button').data('item-custom2-value', $(this).val());
 });
 
+
+// input for quantity of item
+
 $('#my-quantity').change(function () {
     $('#my-button').data('item-quantity', $(this).val());
+});
+
+$("#my-quantity").keypress(function (evt) {
+    evt.preventDefault();
 });
 
 $('.product__small').on('click', function (event) {

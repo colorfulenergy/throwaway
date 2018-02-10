@@ -1,6 +1,6 @@
 ---
 custom-name: size
-custom-options: Small|Medium|Large
+custom-options: 6|7|8|9
 id: converse_pink
 url: /
 title: pink converse
