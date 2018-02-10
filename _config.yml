@@ -1,2 +1,2 @@
-baseurl: troll1.netlify.com
+baseurl: ''
 exclude: ['README.md']
