@@ -2,11 +2,16 @@
 .cart {
   background-color: red;
 
+  color: black;
   position: fixed;
   right: 0;
   top: 25%;
 
   padding: 10px;
+}
+
+.cart:hover {
+  color: white;
 }
 
 /*HEADER*/

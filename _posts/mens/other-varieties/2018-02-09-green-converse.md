@@ -4,9 +4,9 @@ custom-options: Small|Medium|Large
 id: shoe_green
 url: /
 title: green converse
-price: '20'
+price: 20.00
 pic-url: /img/converse.png
-date: 2018-02-09T20:44:56.778Z
+date: 2018-2-8 11:51:01 -08:00
 categories: mens-shoe
 main: false
 type: blue-shoe

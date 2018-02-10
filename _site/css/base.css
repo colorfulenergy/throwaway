@@ -56,6 +56,16 @@ nav ul:last-of-type {
   margin-top: 20px;
 }
 
+nav ul a {
+  color: black;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  color: #c9192e;
+  text-decoration: underline;
+}
+
 main img {
   width: 100%;
 }

@@ -1,36 +1,58 @@
 ---
 layout: all-products
 ---
+<div class="shop-container">
+  <h2>Clothes</h2>
+  <div class="display-shop">
+    {% for post in site.categories['women-clothes'] %}
+      {% if post.main == true %}
+        <div>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <img src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
 
-{% for post in site.categories['women-clothes'] %}
-  {% if post.main == true %}
-    <img src="{{ post.pic-url }}" alt="">
+            <p>${{ post.price }}</p>
+            <h4>
+              <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
+            </h4>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 
-    <p>${{ post.price }}</p>
-    <h4>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
-    </h4>
-  {% endif %}
-{% endfor %}
+  <h2>Shoes</h2>
+  <div class="display-shop">
+    {% for post in site.categories['women-shoe'] %}
+      {% if post.main == true %}
+      <div>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <img src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
 
-{% for post in site.categories['women-shoe'] %}
-  {% if post.main == true %}
-    <img src="{{ post.pic-url }}" alt="">
+          <p>${{ post.price }}</p>
+          <h4>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
+          </h4>
+        </a>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 
-    <p>${{ post.price }}</p>
-    <h4>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
-    </h4>
-  {% endif %}
-{% endfor %}
+  <h2>Sweater</h2>
+  <div class="display-shop">
+    {% for post in site.categories['women-sweater'] %}
+      {% if post.main == true %}
+      <div>
+        <a href="{{ post.url }}">
+          <img src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
 
-{% for post in site.categories['women-sweater'] %}
-  {% if post.main == true %}
-    <img src="{{ post.pic-url }}" alt="">
-
-    <p>${{ post.price }}</p>
-    <h4>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
-    </h4>
-  {% endif %}
-{% endfor %}
+          <p>${{ post.price }}</p>
+          <h4>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
+          </h4>
+        </a>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

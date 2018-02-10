@@ -1,0 +1,32 @@
+.shop-container h2,
+.display-shop p,
+.display-shop h4 {
+  text-align: center;
+}
+
+.display-shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-shop > div {
+  height: 500px;
+}
+
+.display-shop img {
+  height: 300px;
+}
+
+.display-shop a {
+  text-decoration: none;
+  color: #000;
+}
+
+.display-shop p {
+  color: #c9192e;
+}
+
+.display-shop h4 {
+  font-size: 2em;
+}
