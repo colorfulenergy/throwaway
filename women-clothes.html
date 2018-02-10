@@ -4,15 +4,18 @@ layout: all-products
 
 <!-- loops through all the post with the categories of clothes -->
 
-{% for post in site.categories['women-clothes'] %}
-  {% if post.main == true %}
-  <a href="{{ site.baseurl }}{{ post.url }}">
-    <img src="{{ post.pic-url }}" alt="">
-
-    <p>${{ post.price }}</p>
-    <h4>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
-    </h4>
-  </a>
-  {% endif %}
-{% endfor %}
+<section class="all-products">
+  {% for post in site.categories['women-clothes'] %}
+    {% if post.main == true %}
+    <div class="all-products__div">
+      <a class="all-products__a" href="{{ site.baseurl }}{{ post.url }}">
+        <img class="all-products__img" src="{{ post.pic-url }}" alt="{{ post.title }}">
+        <p class="all-products__p">
+          <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
+        </p>
+        <p class="all-products__price">${{ post.price }}</p>
+      </a>
+    </div>
+    {% endif %}
+  {% endfor %}
+</section>
