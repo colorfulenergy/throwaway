@@ -12,4 +12,3 @@ main: false
 type: blue-shoe
 thumbnail: /img/converse.png
 ---
-

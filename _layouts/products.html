@@ -5,64 +5,79 @@ layout: default
   {% include nav.html %}
 </header>
 {% include sub-nav-shop.html %}
+  <div class="whole-side">
+    <div class="left-side">
+      {% for post in site.posts %}
+      {% if post.main == true %}
+      {% if page.url contains post.type %}
+      <img id="big-img" src="{{site.baseurl}}{{ post.pic-url }}" alt="">
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="right-side">
 
-<!-- loops through post and loads all the other images -->
-<div>
-    {% for post in site.posts %}
-     {% if page.url contains post.type %}
-        <img src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
-        {% endif %}
-    {% endfor %}
-</div>
+      {% for post in site.posts %}
+      {% if post.main == true %}
+      {% if page.url contains post.type %}
+      <p>${{ post.price }}</p>
+      <h2>{{ post.type }}</h2>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
 
-<!-- loops through all the post and check if it is the main product then check if the url contains -->
-<!-- the type of the product -->
+      <!-- loops through post and loads all the other images -->
 
-{% for post in site.posts %}
-     {% if post.main == true %}
+      <div class="variety-list">
+        {% for post in site.posts %}
         {% if page.url contains post.type %}
-            <img id="big-img" src="{{site.baseurl}}{{ post.pic-url }}" alt="">
-            <p>${{ post.price }}</p>
-            <h2>{{ post.type }}</h2>
+        <div>
+          <p>{{ post.title }}</p>
+          <img class="product__small" src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
+        </div>
         {% endif %}
+        {% endfor %}
+      </div>
+
+
+      <!-- snipcart additions to quantity and size -->
+      <div class="product__view">
+        <p>size</p>
+
+        <select id="my-size">
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+      </div>
+
+      <div class="product__view">
+        <p>Quantity</p>
+        <input type="number" id="my-quantity" value="1">
+      </div>
+
+
+
+      <!-- loops through the post and checks if the type of the product is the same as the url -->
+
+      {% for post in site.posts %}
+      {% if page.url contains post.type %}
+      {% if post.main == true %}
+      {% assign main_true = true %}
+      {% else %}
+      {% assign main_true = false %}
+      {% endif %}
+      <button id="{% if main_true %}my-button{% endif %}" data-item-custom2-name="{{ post.custom-name }}"
+      data-item-custom2-options="{{ post.custom-options }}" class="snipcart-add-item {% if main_true %}active{% endif %}"
+      data-item-id="{{ post.id }}" data-item-url="{{ post.url }}" data-item-name="{{ post.title }}" data-item-price="{{ post.price }}"
+      data-item-image="{{site.baseurl}}{{ post.pic-url }}" data-item-quantity="1">
+      Buy now
+    </button>
     {% endif %}
-{% endfor %}
 
-<!-- snipcart additions to quantity and size -->
-
-<p>Quantity</p>
-<input type="number" id="my-quantity" value="1">
-
-<p>size</p>
-
-<select id="my-size">
-    <option>Small</option>
-    <option>Medium</option>
-    <option>Large</option>
-</select>
-
-
-{{ content }}
-
-<!-- loops through the post and checks if the type of the product is the same as the url -->
-
-{% for post in site.posts %}
-{% if page.url contains post.type %}
-{% if post.main == true %}
-  {% assign main_true = true %}
-{% else %}
-  {% assign main_true = false %}
-{% endif %}
-<button id="{% if main_true %}my-button{% endif %}" data-item-custom2-name="{{ post.custom-name }}"
-    data-item-custom2-options="{{ post.custom-options }}" class="snipcart-add-item {% if main_true %}active{% endif %}"
-    data-item-id="{{ post.id }}" data-item-url="{{ post.url }}" data-item-name="{{ post.title }}" data-item-price="{{ post.price }}"
-    data-item-image="{{site.baseurl}}{{ post.pic-url }}" data-item-quantity="1">
-    Buy now
-</button>
-{% endif %}
-
-{% endfor %}
-
+    {% endfor %}
+  </div>
+</div>
 <footer>
   {% include footer.html %}
 

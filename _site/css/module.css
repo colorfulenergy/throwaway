@@ -190,6 +190,7 @@ a.button {
 
 .footer__third {
   align-items: center;
+  text-align: center;
 }
 
 .footer__third h4,
@@ -210,6 +211,12 @@ a.button {
 .show {
   transform: translateX(0%);
 }
+
+.display-shop {
+  display: flex;
+  flex-flow: wrap;
+}
+
 
 @media screen and (max-width: 900px){
   .nav > div,

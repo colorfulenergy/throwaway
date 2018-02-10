@@ -1,0 +1,36 @@
+---
+layout: all-products
+---
+
+{% for post in site.categories['women-clothes'] %}
+  {% if post.main == true %}
+    <img src="{{ post.pic-url }}" alt="">
+
+    <p>${{ post.price }}</p>
+    <h4>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
+    </h4>
+  {% endif %}
+{% endfor %}
+
+{% for post in site.categories['women-shoe'] %}
+  {% if post.main == true %}
+    <img src="{{ post.pic-url }}" alt="">
+
+    <p>${{ post.price }}</p>
+    <h4>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
+    </h4>
+  {% endif %}
+{% endfor %}
+
+{% for post in site.categories['women-sweater'] %}
+  {% if post.main == true %}
+    <img src="{{ post.pic-url }}" alt="">
+
+    <p>${{ post.price }}</p>
+    <h4>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
+    </h4>
+  {% endif %}
+{% endfor %}

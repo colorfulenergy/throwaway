@@ -7,7 +7,7 @@ $('#my-quantity').change(function () {
     $('#my-button').data('item-quantity', $(this).val());
 });
 
-$('img').on('click', function (event) {
+$('.product__small').on('click', function (event) {
     var buttons = $('button');
     var img = this;
     buttons.map(function (ele) {
