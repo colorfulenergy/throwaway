@@ -2,7 +2,7 @@
 custom-name: size
 custom-options: Small|Medium|Large
 custom-id: short-sleeve_green
-title: green shirt
+title: green
 price: '300'
 pic-url: /img/green-short-sleeve.jpeg
 date: 2018-02-11T01:22:47.065Z
