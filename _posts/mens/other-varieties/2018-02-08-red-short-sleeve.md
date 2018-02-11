@@ -2,7 +2,6 @@
 custom-name: size
 custom-options: Small|Medium|Large
 custom-id: short_sleeve_RED
-url: /
 title: red
 price: '20.00'
 pic-url: /img/red-short-sleeve.jpg

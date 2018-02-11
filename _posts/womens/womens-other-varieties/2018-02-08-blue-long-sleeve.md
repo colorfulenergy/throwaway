@@ -2,7 +2,6 @@
 custom-name: size
 custom-options: Small|Medium|Large
 id: long-sleeve_BLUE
-url: /
 title: blue long sleeve
 price: 20.00
 pic-url: /img/blue-long-sleeve.jpg

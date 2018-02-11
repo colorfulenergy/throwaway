@@ -2,7 +2,6 @@
 custom-name: size
 custom-options: Small|Medium|Large
 id: shoe_green
-url: /
 title: green converse
 price: 20.00
 pic-url: /img/green-converse.png

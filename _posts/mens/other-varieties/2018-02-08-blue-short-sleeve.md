@@ -2,7 +2,6 @@
 custom-name: size
 custom-options: Small|Medium|Large
 custom-id: short_sleeve_BLUE
-url: /
 title: blue
 price: '20.00'
 pic-url: /img/blue-short-sleeve.jpg

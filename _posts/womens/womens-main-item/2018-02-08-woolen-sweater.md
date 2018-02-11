@@ -2,7 +2,6 @@
 custom-name: size
 custom-options: Small|Medium|Large
 id: Sweater_YELLOW
-url: /
 title: yellow woolen sweater
 price: 20.00
 pic-url: /img/yellow-woolen-sweater.jpg

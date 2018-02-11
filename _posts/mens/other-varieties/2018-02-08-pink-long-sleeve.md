@@ -2,7 +2,6 @@
 custom-name: size
 custom-options: Small|Medium|Large
 custom-id: long-sleeve_PINK
-url: /
 title: pink
 price: '20.00'
 pic-url: /img/pink-long-sleeve.jpg

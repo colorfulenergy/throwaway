@@ -2,7 +2,6 @@
 custom-name: size
 custom-options: Small|Medium|Large
 id: Shoe_black
-url: /
 title: black vans
 price: 20.00
 pic-url: /img/black-vans.jpg
