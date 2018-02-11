@@ -40,6 +40,7 @@ collections:
       - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "boolean", default: false}
       - {label: "the products type", name: "type", widget: "string"}
+      - {label: "the products layout", name: "layout", widget: "string", default: "product-varieties"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
 
   - name: "womens-main" # Used in routes, e.g., /admin/collections/blog
@@ -77,4 +78,5 @@ collections:
       - {label: "mens or womens", name: "categories", widget: "select", options: ["women-clothes", "women-shoe", "women-sweater"]}
       - {label: "is it a main product", name: "main", widget: "boolean", default: false}
       - {label: "the products type", name: "type", widget: "string"}
+      - {label: "the products layout", name: "layout", widget: "string", default: "product-varieties"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}

@@ -9,5 +9,6 @@ date: 2018-2-8 11:51:01 -08:00
 categories: women-sweater
 main: false
 type: women-woolen-sweater
+layout: product-varieties
 thumbnail: /img/orange-woolen-sweater.jpg
 ---

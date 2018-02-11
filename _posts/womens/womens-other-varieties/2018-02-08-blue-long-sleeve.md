@@ -9,5 +9,6 @@ date: 2018-2-8 10:51:01 -08:00
 categories: women-clothes
 main: false
 type: women-long-sleeve
+layout: product-varieties
 thumbnail: /img/blue-long-sleeve.jpg
 ---

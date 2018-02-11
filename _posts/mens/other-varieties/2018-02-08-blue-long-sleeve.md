@@ -9,5 +9,6 @@ date: 2018-2-8 10:51:01 -08:00
 categories: mens-clothes
 main: false
 type: long-sleeve
+layout: product-varieties
 thumbnail: /img/blue-long-sleeve.jpg
 ---

@@ -9,5 +9,6 @@ date: 2018-2-8 11:51:01 -08:00
 categories: mens-clothes
 type: short-sleeve
 main: false
+layout: product-varieties
 thumbnail: /img/red-short-sleeve.jpg
 ---

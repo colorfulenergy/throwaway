@@ -9,5 +9,6 @@ date: 2018-2-8 11:51:01 -08:00
 categories: women-shoe
 main: false
 type: women-converse
+layout: product-varieties
 thumbnail: /img/green-converse.png
 ---

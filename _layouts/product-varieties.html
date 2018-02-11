@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <header>
   {% include nav.html %}
 </header>
@@ -8,8 +9,8 @@ layout: default
   <div class="whole-side">
     <div class="left-side">
       {% for post in site.posts %}
-      {% if post.main == true %}
-      {% if page.url contains post.type %}
+      {% if post.main == false %}
+      {% if page.url contains post.url %}
       <img id="big-img" src="{{site.baseurl}}{{ post.pic-url }}" alt="">
       {% endif %}
       {% endif %}
@@ -18,8 +19,10 @@ layout: default
     <div class="right-side">
 
       {% for post in site.posts %}
-      {% if post.main == true %}
-      {% if page.url contains post.type %}
+
+      {% if post.main == false %}
+
+      {% if page.url contains post.url %}
       <p>${{ post.price }}</p>
       <h2>{{ post.type }}</h2>
       {% endif %}
@@ -72,8 +75,8 @@ layout: default
       <!-- loops through the post and checks if the type of the product is the same as the url -->
 
       {% for post in site.posts %}
-      {% if page.url contains post.type %}
-      {% if post.main == true %}
+      {% if page.url contains post.url %}
+      {% if post.main == false %}
       {% assign main_true = true %}
       {% else %}
       {% assign main_true = false %}
