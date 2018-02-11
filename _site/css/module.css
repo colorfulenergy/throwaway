@@ -8,6 +8,7 @@
   top: 25%;
 
   padding: 10px;
+  z-index: 2;
 }
 
 .cart:hover {
