@@ -1,8 +1,7 @@
 ---
 custom-name: size
 custom-options: Small|Medium|Large
-id: vneck_white
-url: /
+custom-id: vneck_white
 title: vneck_white
 price: '100'
 pic-url: /img/vneck_white.jpeg
