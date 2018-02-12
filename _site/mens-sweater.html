@@ -2,24 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Clothing Shop</title>
-    <link rel="stylesheet" href="/css/products.css">
+    <title>Best Shop N.A.</title>
+    <!-- font-awesome cdn -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- snipcart css -->
+    <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+    <!-- snipcart cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="MTMxM2JjYmMtYmIyNi00OTEzLThhOWItOWQ0Mjg0NDU1MTliNjM2NDYxMTc5MDAzNzUxOTc3"></script>
+    <!-- netlify-cdn -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- custom css -->
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/module.css">
     <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/products.css">
     <link rel="stylesheet" href="/css/shop.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-
-    <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="MTMxM2JjYmMtYmIyNi00OTEzLThhOWItOWQ0Mjg0NDU1MTliNjM2NDYxMTc5MDAzNzUxOTc3"></script>
-
-    <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="/main.css">
-    <script src="/main.js" defer></script>
-    <script src="/responsive-nav.js" defer></script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
+    <!-- custom js -->
+    <script src="/js/main.js" defer></script>
+    <script src="/js/responsive-nav.js" defer></script>
   </head>
   <body>
     <header>
@@ -62,6 +64,8 @@
   <li><a href="/">Shop</a></li>
   
   <li><a href="/mens-sweater.html">Mens Sweaters</a></li>
+  
+  
   
   
   
@@ -168,25 +172,24 @@
   </div>
 </a>
 
-    <!-- loops through all the post with the categories of shoe -->
-
-<section class="all-products">
-  
+    <div class="container-shop">
+  <div class="shop-container">
+    <!-- loops through all the post with the categories of mens-sweater -->
     
-  
+      
     
-    <div class="all-products__div">
-      <a class="all-products__a" href="/mens-sweater/2018/02/08/woolen-sweater.html">
-        <img class="all-products__img" src="/img/yellow-woolen-sweater.jpg" alt="yellow woolen sweater">
-        <p class="all-products__p">
-          <a href="/mens-sweater/2018/02/08/woolen-sweater.html">woolen-sweater</a>
-        </p>
-        <p class="all-products__price">$20.00</p>
-      </a>
-    </div>
+      
+        <div class="shop-item">
+          <a href="/mens-sweater/2018/02/08/woolen-sweater.html">
+            <img src="/img/yellow-woolen-sweater.jpg" alt="yellow woolen sweater">
+            <h4>woolen-sweater</h4>
+            <p>$20.00</p>
+          </a>
+        </div>
+      
     
-  
-</section>
+  </div>
+</div>
 
     <footer>
       <!-- first box -->

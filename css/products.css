@@ -15,10 +15,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  min-height: 80vh;
+  min-height: 75vh;
+  padding: 15px 0 30px;
 }
-
-
 
 .whole-side .left-side,
 .whole-side .right-side {
@@ -43,10 +42,47 @@
 }
 
 /*SMALL IMGS CONTAINER*/
+.style-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.style-list > div {
+  margin: 0 3px;
+}
+
+.variety-list,
+.product__view {
+  margin: 5px 0;
+  padding-bottom: 5px;
+}
+
+.product__view,
 .variety-list {
   display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  margin: 5px 0;
+}
+
+.product__view p,
+.variety-list p {
+  width: 100px;
+  margin-right: 10px;
+}
+
+/*.variety-list {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  text-align: center;
+}*/
+
+.variety-list a {
+  color: black;
+  text-decoration: none;
 }
 
 .variety-list  p {
@@ -59,15 +95,6 @@
 }
 
 /*SNIPCART FORM*/
-.product__view {
-  display: flex;
-  justify-content: flex-start;
-  margin: 5px 0;
-}
-
-.product__view p {
-  margin-right: 10px;
-}
 
 #my-size,
 .product__view input {
@@ -127,10 +154,5 @@
 
   .right-side h2 {
     margin-bottom: 15px;
-  }
-
-  .variety-list {
-    justify-content: flex-start;
-    margin-right: 20px;
   }
 }

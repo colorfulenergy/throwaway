@@ -1,0 +1,11 @@
+button {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+#but {
+    display: block;
+}

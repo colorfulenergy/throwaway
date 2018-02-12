@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <header>
   {% include nav.html %}
 </header>
@@ -29,22 +30,24 @@ layout: default
       <!-- loops through post and loads all the other images -->
 
       <div class="variety-list">
-        {% for post in site.posts %}
-        {% if page.url contains post.type %}
-        <a href="{{ post.url }}">
+        <p>Color: </p>
+        <div class="style-list">
+          {% for post in site.posts %}
+          {% if page.url contains post.type %}
           <div>
-            <p>{{ post.title }}</p>
-            <img class="product__small" src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
+            <a href="{{ post.url }}">
+              <p>{{ post.title }}</p>
+              <img class="product__small" src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
+            </a>
           </div>
-        </a>
-        {% endif %}
-        {% endfor %}
+          {% endif %}
+          {% endfor %}
+        </div>
       </div>
-
 
       <!-- snipcart additions to quantity and size -->
       <div class="product__view">
-        <p>size</p>
+        <p>size: </p>
 
         {% if page.url contains 'shoe' %}
         <select id="my-size">
@@ -63,7 +66,7 @@ layout: default
       </div>
 
       <div class="product__view">
-        <p>Quantity</p>
+        <p>Quantity: </p>
         <input type="number" id="my-quantity" value="1" min="0">
       </div>
 

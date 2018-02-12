@@ -9,71 +9,68 @@ layout: default
   <div class="whole-side">
     <div class="left-side">
       {% for post in site.posts %}
-      {% if post.main == false %}
-      {% if page.url contains post.url %}
-      <img id="big-img" src="{{site.baseurl}}{{ post.pic-url }}" alt="">
-      {% endif %}
-      {% endif %}
+        {% if post.main == false %}
+          {% if page.url contains post.url %}
+              <img id="big-img" src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
+          {% endif %}
+        {% endif %}
       {% endfor %}
     </div>
+
     <div class="right-side">
-
       {% for post in site.posts %}
-
-      {% if post.main == false %}
-
-      {% if page.url contains post.url %}
-      <p>${{ post.price }}</p>
-      <h2>{{ post.type }}</h2>
-      {% endif %}
-      {% endif %}
+        {% if post.main == false %}
+          {% if page.url contains post.url %}
+            <p>${{ post.price }}</p>
+            <h2>{{ post.type }}</h2>
+          {% endif %}
+        {% endif %}
       {% endfor %}
 
       <!-- loops through post and loads all the other images -->
 
       <div class="variety-list">
-        {% for post in site.posts %}
-        {% if page.url contains post.type %}
-        <a href="{{ post.url }}">
+        <p>Color: </p>
+        <div class="style-list">
+          {% for post in site.posts %}
+          {% if page.url contains post.type %}
           <div>
-            <p>{{ post.title }}</p>
-            <img class="product__small" src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
+            <a href="{{ post.url }}">
+              <p>{{ post.title }}</p>
+              <img class="product__small" src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
+            </a>
           </div>
-        </a>
-        {% endif %}
-        {% endfor %}
+          {% endif %}
+          {% endfor %}
+        </div>
       </div>
-
 
       <!-- snipcart additions to quantity and size -->
       <div class="product__view">
-        <p>size</p>
+        <p>size: </p>
 
         {% if page.url contains 'shoe' %}
-        <select id="my-size">
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
-        </select>
+          <select id="my-size">
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+          </select>
         {% else %}
-        <select id="my-size">
-          <option>Small</option>
-          <option>Medium</option>
-          <option>Large</option>
-        </select>
+          <select id="my-size">
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
         {% endif %}
       </div>
 
       <div class="product__view">
-        <p>Quantity</p>
+        <p>Quantity: </p>
         <input type="number" id="my-quantity" value="1" min="0">
       </div>
 
-
-
       <!-- loops through the post and checks if the type of the product is the same as the url -->
-
       {% for post in site.posts %}
       {% if page.url contains post.url %}
       {% if post.main == false %}
@@ -88,11 +85,9 @@ layout: default
       Buy now
     </button>
     {% endif %}
-
     {% endfor %}
   </div>
 </div>
 <footer>
   {% include footer.html %}
-
 </footer>

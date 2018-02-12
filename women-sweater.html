@@ -2,20 +2,19 @@
 layout: all-products
 ---
 
-<!-- loops through all the post with the categories of sweater -->
-
-<section class="all-products">
-  {% for post in site.categories['women-sweater'] %}
-    {% if post.main == true %}
-    <div class="all-products__div">
-      <a class="all-products__a" href="{{ site.baseurl }}{{ post.url }}">
-        <img class="all-products__img" src="{{ post.pic-url }}" alt="{{ post.title }}">
-        <p class="all-products__p">
-          <a href="{{ site.baseurl }}{{ post.url }}">{{post.type}}</a>
-        </p>
-        <p class="all-products__price">${{ post.price }}</p>
-      </a>
-    </div>
-    {% endif %}
-  {% endfor %}
-</section>
+<div class="container-shop">
+  <div class="shop-container">
+    <!-- loops through all the post with the categories of women-sweater -->
+    {% for post in site.categories['women-sweater'] %}
+      {% if post.main == true %}
+        <div class="shop-item">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <img src="{{ post.pic-url }}" alt="{{ post.title }}">
+            <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.type }}</a></h4>
+            <p>${{ post.price }}</p>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

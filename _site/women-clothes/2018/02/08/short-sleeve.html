@@ -4,27 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Clothing Shop</title>
+  <title>Best Shop N.A.</title>
+  <!-- font-awesome cdn -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <!-- custom css -->
+  <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/products.css">
+  <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/module.css">
   <link rel="stylesheet" href="/css/layout.css">
-  <link rel="stylesheet" href="/css/base.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
-  <!-- snipcart and styles -->
+  <!-- jquery cdn -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-
+  <!-- snipcart cdn -->
   <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="MTMxM2JjYmMtYmIyNi00OTEzLThhOWItOWQ0Mjg0NDU1MTliNjM2NDYxMTc5MDAzNzUxOTc3"></script>
-
+  <!-- snipcart styles cdn -->
   <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
-
+  <!-- custom js -->
   
-    <link rel="stylesheet" href="/main.css">
-    <script src="/main.js" defer></script>
+    <script src="/js/main.js" defer></script>
   
+  <!-- netlify cdn -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-
 </head>
 <body>
   <a href="#" class="snipcart-checkout">
@@ -74,6 +74,8 @@
   <li><a href="/">Shop</a></li>
   
   <li><a href="/women-clothes.html">Womens clothes</a></li>
+  
+  
   
   
   
@@ -243,6 +245,8 @@
       
       
       
+      
+      
       <img id="big-img" src="/img/black-short-sleeve.jpg" alt="">
       
       
@@ -276,6 +280,8 @@
     </div>
     <div class="right-side">
 
+      
+      
       
       
       
@@ -378,102 +384,113 @@
       <!-- loops through post and loads all the other images -->
 
       <div class="variety-list">
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <a href="/mens-clothes/2018/02/08/red-short-sleeve.html">
+        <p>Color: </p>
+        <div class="style-list">
+          
+          
           <div>
-            <p>red</p>
-            <img class="product__small" src="/img/red-short-sleeve.jpg" alt="red">
+            <a href="/mens-clothes/2018/02/11/green-t-shirt.html">
+              <p>green</p>
+              <img class="product__small" src="/img/green-short-sleeve.jpeg" alt="green">
+            </a>
           </div>
-        </a>
-        
-        
-        
-        
-        
-        <a href="/mens-clothes/2018/02/08/blue-short-sleeve.html">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           <div>
-            <p>blue</p>
-            <img class="product__small" src="/img/blue-short-sleeve.jpg" alt="blue">
+            <a href="/mens-clothes/2018/02/08/red-short-sleeve.html">
+              <p>red</p>
+              <img class="product__small" src="/img/red-short-sleeve.jpg" alt="red">
+            </a>
           </div>
-        </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <a href="/mens-clothes/2018/02/08/short-sleeve.html">
+          
+          
+          
+          
+          
           <div>
-            <p>short sleeve shirt</p>
-            <img class="product__small" src="/img/black-short-sleeve.jpg" alt="short sleeve shirt">
+            <a href="/mens-clothes/2018/02/08/blue-short-sleeve.html">
+              <p>blue</p>
+              <img class="product__small" src="/img/blue-short-sleeve.jpg" alt="blue">
+            </a>
           </div>
-        </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <div>
+            <a href="/mens-clothes/2018/02/08/short-sleeve.html">
+              <p>short sleeve shirt</p>
+              <img class="product__small" src="/img/black-short-sleeve.jpg" alt="short sleeve shirt">
+            </a>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </div>
       </div>
-
 
       <!-- snipcart additions to quantity and size -->
       <div class="product__view">
-        <p>size</p>
+        <p>size: </p>
 
         
         <select id="my-size">
@@ -485,7 +502,7 @@
       </div>
 
       <div class="product__view">
-        <p>Quantity</p>
+        <p>Quantity: </p>
         <input type="number" id="my-quantity" value="1" min="0">
       </div>
 
@@ -494,6 +511,17 @@
       <!-- loops through the post and checks if the type of the product is the same as the url -->
 
       
+      
+      
+      <button id="" data-item-custom2-name="size"
+      data-item-custom2-options="Small|Medium|Large" class="snipcart-add-item "
+      data-item-id="short-sleeve_green" data-item-url="/women-clothes/2018/02/08/short-sleeve.html" data-item-name="green" data-item-price="300"
+      data-item-image="/img/green-short-sleeve.jpeg" data-item-quantity="1">
+      Buy now
+    </button>
+    
+
+    
       
 
     
