@@ -29,7 +29,11 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  {% include cart.html %}
-  {{content}}
+  <div class="flex-container">
+    {% include cart.html %}
+    <div class="flex-grow">
+      {{content}}
+    </div>
+  </div>
 </body>
 </html>

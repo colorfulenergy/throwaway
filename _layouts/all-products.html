@@ -24,15 +24,18 @@
     <script src="{{site.baseurl}}/js/responsive-nav.js" defer></script>
   </head>
   <body>
+  <div class="flex-container">
     <header>
       {% include nav.html %}
     </header>
-    {% include sub-nav-shop.html %}
-
-    {% include cart.html %}
-    {{ content }}
+    <div class="flex-grow">
+      {% include sub-nav-shop.html %}
+      {% include cart.html %}
+      {{ content }}
+    </div>
     <footer>
       {% include footer.html %}
     </footer>
-  </body>
+  </div>
+</body>
 </html>
