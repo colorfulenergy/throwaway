@@ -11,7 +11,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "custom name", name: "custom-name", widget: "string", default: "size"}
+      - {label: "custom name", name: "custom-name", widget: "hidden", default: "size"}
       - {label: "custom options", name: "custom-options", widget: "string", default: "Small|Medium|Large"}
       - {label: "product id", name: "custom-id", widget: "string"}
       - {label: "product name", name: "title", widget: "string"}
@@ -19,9 +19,9 @@ collections:
       - {label: "product image", name: "pic-url", widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
-      - {label: "is it a main product", name: "main", widget: "boolean", default: true}
+      - {label: "is it a main product", name: "main", widget: "hidden", default: true}
       - {label: "the products type", name: "type", widget: "string"}
-      - {label: "the products layout", name: "layout", widget: "string", default: "products"}
+      - {label: "the products layout", name: "layout", widget: "hidden", default: "products"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
 
   - name: "mens-variety" # Used in routes, e.g., /admin/collections/blog
@@ -30,7 +30,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "custom name", name: "custom-name", widget: "string", default: "size"}
+      - {label: "custom name", name: "custom-name", widget: "hidden", default: "size"}
       - {label: "custom options", name: "custom-options", widget: "string", default: "Small|Medium|Large"}
       - {label: "product id", name: "custom-id", widget: "string"}
       - {label: "product name", name: "title", widget: "string"}
@@ -38,9 +38,9 @@ collections:
       - {label: "product image", name: "pic-url", widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
-      - {label: "is it a main product", name: "main", widget: "boolean", default: false}
+      - {label: "is it a main product", name: "main", widget: "hidden", default: false}
       - {label: "the products type", name: "type", widget: "string"}
-      - {label: "the products layout", name: "layout", widget: "string", default: "product-varieties"}
+      - {label: "the products layout", name: "layout", widget: "hidden", default: "product-varieties"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
 
   - name: "womens-main" # Used in routes, e.g., /admin/collections/blog
@@ -49,7 +49,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "custom name", name: "custom-name", widget: "string", default: "size"}
+      - {label: "custom name", name: "custom-name", widget: "hidden", default: "size"}
       - {label: "custom options", name: "custom-options", widget: "string", default: "Small|Medium|Large"}
       - {label: "product id", name: "custom-id", widget: "string"}
       - {label: "product name", name: "title", widget: "string"}
@@ -57,9 +57,9 @@ collections:
       - {label: "product image", name: "pic-url", widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "mens or womens", name: "categories", widget: "select", options: ["women-clothes", "women-shoe", "women-sweater"]}
-      - {label: "is it a main product", name: "main", widget: "boolean", default: true}
+      - {label: "is it a main product", name: "main", widget: "hidden", default: true}
       - {label: "the products type", name: "type", widget: "string"}
-      - {label: "the products layout", name: "layout", widget: "string", default: "products"}
+      - {label: "the products layout", name: "layout", widget: "hidden", default: "products"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
 
   - name: "womens-variety" # Used in routes, e.g., /admin/collections/blog
@@ -68,7 +68,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "custom name", name: "custom-name", widget: "string", default: "size"}
+      - {label: "custom name", name: "custom-name", widget: "hidden", default: "size"}
       - {label: "custom options", name: "custom-options", widget: "string", default: "Small|Medium|Large"}
       - {label: "product id", name: "custom-id", widget: "string"}
       - {label: "product name", name: "title", widget: "string"}
@@ -76,7 +76,7 @@ collections:
       - {label: "product image", name: "pic-url", widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "mens or womens", name: "categories", widget: "select", options: ["women-clothes", "women-shoe", "women-sweater"]}
-      - {label: "is it a main product", name: "main", widget: "boolean", default: false}
+      - {label: "is it a main product", name: "main", widget: "hidden", default: false}
       - {label: "the products type", name: "type", widget: "string"}
-      - {label: "the products layout", name: "layout", widget: "string", default: "product-varieties"}
+      - {label: "the products layout", name: "layout", widget: "hidden", default: "product-varieties"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
