@@ -6,15 +6,15 @@ layout: all-products
   <h2>Clothes</h2>
   <div class="shop-container">
     <!-- loops through all the post with the categories of mens-clothes -->
-    {% for post in site.categories['mens-clothes'] %}
-      {% if post.main == true %}
-        <div class="shop-item">
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            <img src="{{ site.baseurl }}{{ post.pic-url }}" alt="{{ post.title }}">
-            <p>${{ post.price }}</p>
-            <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.type }}</a></h4>
-          </a>
-        </div>
+    {% for item in site.mens_clothes %}
+      {% if item.main %}
+      <div class="shop-item">
+        <a href="{{ site.baseurl }}{{ item.url }}">
+          <img src="{{ site.baseurl }}{{ item.pic-url }}" alt="{{ item.title }}">
+          <h4>{{ item.type }}</h4>
+          <p>${{ item.price }}</p>
+        </a>
+      </div>
       {% endif %}
     {% endfor %}
   </div>
@@ -22,31 +22,34 @@ layout: all-products
   <h2>Shoes</h2>
   <div class="shop-container">
     <!-- loops through all the post with the categories of mens-shoe -->
-    {% for post in site.categories['mens-shoe'] %}
-      {% if post.main == true %}
-        <div class="shop-item">
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            <img src="{{ site.baseurl }}{{ post.pic-url }}" alt="{{ post.title }}">
-            <p>${{ post.price }}</p>
-            <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.type }}</a></h4>
-          </a>
-        </div>
-      {% endif %}
+    {% for item in site.mens_shoe %}
+    {% if item.main %}
+
+    <div class="shop-item">
+      <a href="{{ site.baseurl }}{{ item.url }}">
+        <img src="{{ site.baseurl }}{{ item.pic-url }}" alt="{{ item.title }}">
+        <h4>{{ item.type }}</h4>
+        <p>${{ item.price }}</p>
+      </a>
+    </div>
+
+    {% endif %}
+
     {% endfor %}
   </div>
 
   <h2>Sweater</h2>
   <div class="shop-container">
     <!-- loops through all the post with the categories of mens-sweater -->
-    {% for post in site.categories['mens-sweater'] %}
-      {% if post.main == true %}
-        <div class="shop-item">
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            <img src="{{ site.baseurl }}{{ post.pic-url }}" alt="{{ post.title }}">
-            <p>${{ post.price }}</p>
-            <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.type }}</a></h4>
-          </a>
-        </div>
+    {% for item in site.mens_sweaters %}
+      {% if item.main %}
+      <div class="shop-item">
+        <a href="{{ site.baseurl }}{{ item.url }}">
+          <img src="{{ site.baseurl }}{{ item.pic-url }}" alt="{{ item.title }}">
+          <h4>{{ item.type }}</h4>
+          <p>${{ item.price }}</p>
+        </a>
+      </div>
       {% endif %}
     {% endfor %}
   </div>

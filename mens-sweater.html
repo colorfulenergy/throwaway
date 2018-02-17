@@ -5,16 +5,16 @@ layout: all-products
 <div class="container-shop">
   <div class="shop-container">
     <!-- loops through all the post with the categories of mens-sweater -->
-    {% for post in site.categories['mens-sweater'] %}
-      {% if post.main == true %}
-        <div class="shop-item">
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            <img src="{{ site.baseurl }}{{ post.pic-url }}" alt="{{ post.title }}">
-            <h4>{{ post.type }}</h4>
-            <p>${{ post.price }}</p>
-          </a>
-        </div>
-      {% endif %}
+    {% for item in site.mens_sweaters %}
+    {% if item.main %}
+    <div class="shop-item">
+      <a href="{{ site.baseurl }}{{ item.url }}">
+        <img src="{{ site.baseurl }}{{ item.pic-url }}" alt="{{ item.title }}">
+        <h4>{{ item.type }}</h4>
+        <p>${{ item.price }}</p>
+      </a>
+    </div>
+    {% endif %}
     {% endfor %}
   </div>
 </div>

@@ -2,7 +2,25 @@
 layout: default
 ---
 
-<!-- this page is for other varities of the same product -->
+{% if page.url contains 'mens' %}
+{% if page.url contains 'mens-clothes' %}
+  {% assign currentCollection = site.mens_clothes %}
+{% elsif page.url contains 'mens-shoe' %}
+  {% assign currentCollection = site.mens_shoe %}
+{% elsif page.url contains 'mens-sweaters' %}
+    {% assign currentCollection = site.mens_sweaters %}
+{% endif %}
+{% endif %}
+
+{% if page.url contains 'women' %}
+{% if page.url contains 'clothes' %}
+  {% assign currentCollection = site.women_clothes %}
+{% elsif page.url contains 'shoe' %}
+  {% assign currentCollection = site.women_shoe %}
+{% elsif page.url contains 'sweaters' %}
+    {% assign currentCollection = site.women_sweaters %}
+{% endif %}
+{% endif %}
 
 <header>
   {% include nav.html %}
@@ -10,36 +28,36 @@ layout: default
 {% include sub-nav-shop.html %}
   <div class="whole-side">
     <div class="left-side">
-      {% for post in site.posts %}
-        {% if post.main == false %}
-          {% if page.url contains post.url %}
-              <img id="big-img" src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
+      {% for item in currentCollection %}
+        {% if item.main == false %}
+          {% if page.url contains item.url %}
+              <img id="big-img" src="{{site.baseurl}}{{ item.pic-url }}" alt="{{ item.title }}">
           {% endif %}
         {% endif %}
       {% endfor %}
     </div>
 
     <div class="right-side">
-      {% for post in site.posts %}
-        {% if post.main == false %}
-          {% if page.url contains post.url %}
-            <p>${{ post.price }}</p>
-            <h2>{{ post.type }}</h2>
+      {% for item in currentCollection %}
+        {% if item.main == false %}
+          {% if page.url contains item.url %}
+            <p>${{ item.price }}</p>
+            <h2>{{ item.type }}</h2>
           {% endif %}
         {% endif %}
       {% endfor %}
 
-      <!-- loops through post and loads all the other images -->
+      <!-- loops through item and loads all the other images -->
 
       <div class="variety-list">
         <p>Color: </p>
         <div class="style-list">
-          {% for post in site.posts %}
-          {% if page.url contains post.type %}
+          {% for item in currentCollection %}
+          {% if page.url contains item.type %}
           <div>
-            <a href="{{ post.url }}">
-              <p>{{ post.title }}</p>
-              <img class="product__small" src="{{site.baseurl}}{{ post.pic-url }}" alt="{{ post.title }}">
+            <a href="{{ item.url }}">
+              <p>{{ item.title }}</p>
+              <img class="product__small" src="{{site.baseurl}}{{ item.pic-url }}" alt="{{ item.title }}">
             </a>
           </div>
           {% endif %}
@@ -53,12 +71,12 @@ layout: default
 
         {% if page.url contains 'shoe' %}
           <select id="my-size">
-            {% for post in site.posts %}
-            {% if post.main == true %}
-            {% if page.url contains post.type %}
-            {% assign currentSize = post.custom-options | split: '|' %}
-            {% for item in currentSize %}
-            <option>{{ item }}</option>
+            {% for item in currentCollection %}
+            {% if item.main == true %}
+            {% if page.url contains item.type %}
+            {% assign currentSize = item.custom-options | split: '|' %}
+            {% for option in currentSize %}
+            <option>{{ option }}</option>
             {% endfor %}
             {% endif %}
             {% endif %}
@@ -66,12 +84,12 @@ layout: default
           </select>
         {% else %}
           <select id="my-size">
-            {% for post in site.posts %}
-            {% if post.main == true %}
-            {% if page.url contains post.type %}
-            {% assign currentSize = post.custom-options | split: '|' %}
-            {% for item in currentSize %}
-            <option>{{ item }}</option>
+            {% for item in currentCollection %}
+            {% if item.main == true %}
+            {% if page.url contains item.type %}
+            {% assign currentSize = item.custom-options | split: '|' %}
+            {% for option in currentSize %}
+            <option>{{ option }}</option>
             {% endfor %}
             {% endif %}
             {% endif %}
@@ -85,18 +103,18 @@ layout: default
         <input type="number" id="my-quantity" value="1" min="0">
       </div>
 
-      <!-- loops through the post and checks if the type of the product is the same as the url -->
-      {% for post in site.posts %}
-      {% if page.url contains post.url %}
-      {% if post.main == false %}
+      <!-- loops through the item and checks if the type of the product is the same as the url -->
+      {% for item in currentCollection %}
+      {% if page.url contains item.url %}
+      {% if item.main == false %}
       {% assign main_true = true %}
       {% else %}
       {% assign main_true = false %}
       {% endif %}
-      <button id="{% if main_true %}my-button{% endif %}" data-item-custom2-name="{{ post.custom-name }}"
-      data-item-custom2-options="{{ post.custom-options }}" class="snipcart-add-item {% if main_true %}active{% endif %}"
-      data-item-id="{{ post.custom-id }}" data-item-url="{{ page.url }}" data-item-name="{{ post.title }}" data-item-price="{{ post.price }}"
-      data-item-image="{{site.baseurl}}{{ post.pic-url }}" data-item-quantity="1">
+      <button id="{% if main_true %}my-button{% endif %}" data-item-custom2-name="{{ item.custom-name }}"
+      data-item-custom2-options="{{ item.custom-options }}" class="snipcart-add-item {% if main_true %}active{% endif %}"
+      data-item-id="{{ item.custom-id }}" data-item-url="{{ page.url }}" data-item-name="{{ item.title }}" data-item-price="{{ item.price }}"
+      data-item-image="{{site.baseurl}}{{ item.pic-url }}" data-item-quantity="1">
       Buy now
     </button>
     {% endif %}
