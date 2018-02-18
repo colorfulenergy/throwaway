@@ -5,9 +5,9 @@ backend:
 media_folder: "img"
 
 collections:
-  - name: "mens-main-clothes" # Used in routes, e.g., /admin/collections/blog
-    label: "men main clothes" # Used in the UI
-    folder: "_mens_clothes/main-clothes" # The path to the folder where the documents are stored
+  - name: "mens-clothes-style" # Used in routes, e.g., /admin/collections/blog
+    label: "men clothes style" # Used in the UI
+    folder: "_mens_clothes/style" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -17,8 +17,7 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
+      - {label: "what is the category", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: true}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "products"}
@@ -36,16 +35,15 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
+      - {label: "what is the category", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: false}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "product-varieties"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
 
-  - name: "mens-main-shoe" # Used in routes, e.g., /admin/collections/blog
-    label: "men main shoe" # Used in the UI
-    folder: "_mens_shoe/main-shoe" # The path to the folder where the documents are stored
+  - name: "mens-shoe-style" # Used in routes, e.g., /admin/collections/blog
+    label: "mens shoe style" # Used in the UI
+    folder: "_mens_shoe/style" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -55,8 +53,7 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
+      - {label: "what is the category", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: true}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "products"}
@@ -74,16 +71,15 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: false}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "product-varieties"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
 
-  - name: "mens-main-sweaters" # Used in routes, e.g., /admin/collections/blog
-    label: "men main sweaters" # Used in the UI
-    folder: "_mens_sweaters/main-sweaters" # The path to the folder where the documents are stored
+  - name: "mens-sweaters-style" # Used in routes, e.g., /admin/collections/blog
+    label: "men sweaters style" # Used in the UI
+    folder: "_mens_sweaters/style" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -93,8 +89,7 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
+      - {label: "what is the category", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: true}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "products"}
@@ -112,16 +107,15 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: false}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "product-varieties"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
 
-  - name: "women-main-clothes" # Used in routes, e.g., /admin/collections/blog
+  - name: "women-style" # Used in routes, e.g., /admin/collections/blog
     label: "women main clothes" # Used in the UI
-    folder: "_women_clothes/main-clothes" # The path to the folder where the documents are stored
+    folder: "_women_clothes/style" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -131,8 +125,7 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
+      - {label: "what is the category", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: true}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "products"}
@@ -150,16 +143,15 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: false}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "product-varieties"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
 
-  - name: "women-main-shoe" # Used in routes, e.g., /admin/collections/blog
-    label: "women main shoe" # Used in the UI
-    folder: "_women_shoe/main-shoe" # The path to the folder where the documents are stored
+  - name: "women-shoe-style" # Used in routes, e.g., /admin/collections/blog
+    label: "women shoe style" # Used in the UI
+    folder: "_women_shoe/style" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -169,8 +161,7 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
+      - {label: "what is the category", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: true}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "products"}
@@ -188,16 +179,15 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
+      - {label: "what is the category", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: false}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "product-varieties"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
 
-  - name: "women-main-sweaters" # Used in routes, e.g., /admin/collections/blog
-    label: "women main sweaters" # Used in the UI
-    folder: "_women_sweaters/main-sweaters" # The path to the folder where the documents are stored
+  - name: "women-sweaters-style" # Used in routes, e.g., /admin/collections/blog
+    label: "women sweaters style" # Used in the UI
+    folder: "_women_sweaters/style" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -207,8 +197,7 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
+      - {label: "what is the category", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: true}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "products"}
@@ -226,8 +215,7 @@ collections:
       - {label: "product name", name: "title", widget: "string"}
       - {label: "product price", name: "price", widget: "number"}
       - {label: "product image", name: "pic-url", widget: "image"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "mens or womens", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
+      - {label: "what is the category", name: "categories", widget: "select", options: ["mens-clothes", "mens-shoe", "mens-sweater"]}
       - {label: "is it a main product", name: "main", widget: "hidden", default: false}
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "product-varieties"}
