@@ -7,24 +7,30 @@
   text-align: center;
 }
 
+.container-shop h2:first-of-type {
+  margin-top: 0;
+}
+
 .shop-container {
   display: flex;
-  justify-content: space-around;
-  align-items: baseline;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .shop-item {
-  position: relative;
-  width: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.shop-item:after {
+.shop-item > div:first-of-type:after {
   content: 'buy now';
   position: absolute;
-  top: 30%;
-  right: 18%;
-  width: 56%;
+  bottom: 10%;
+  left: 25%;
+  width: 50%;
   height: 40px;
   background-color: #c9192e;
 
@@ -39,19 +45,41 @@
   transition: opacity 0.5s;
 }
 
-.shop-item:hover:after {
+.shop-item > div:first-of-type:hover:after {
   opacity: 1;
 }
 
+.shop-item > div:nth-of-type(2) {
+  background-color: #333;
+}
+
+.shop-item > div {
+  background: #fff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 500px;
+  height: 400px;
+}
+
+.shop-item:nth-of-type(even) div:first-of-type {
+  order: 2;
+}
+
 .shop-item a {
-  color: #000;
+  color: #fff;
   display: block;
   text-decoration: none;
 }
 
 .shop-item img {
   box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
-  height: 200px;
+  max-height: 200px;
+  min-height: 100px;
+  max-width: 200px;
+  min-width: 100px;
 }
 
 .shop-item p {
@@ -69,8 +97,23 @@
 }
 
 @media screen and (max-width: 960px) {
-  .shop-item img {
-    width: 100%;
-    height: unset;
+  .shop-item {
+    flex-direction: column;
+  }
+
+  .shop-item > div {
+    width: 400px;
+    height: 400px;
+  }
+
+  .shop-item:nth-of-type(even) div:first-of-type {
+    order: unset;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .shop-item > div {
+    width: 300px;
+    height: 300px;
   }
 }

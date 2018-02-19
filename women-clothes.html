@@ -5,15 +5,21 @@ layout: all-products
 <div class="container-shop">
   <div class="shop-container">
     {% for item in site.women_clothes %}
-    {% if item.main %}
-    <div class="shop-item">
-      <a href="{{ site.baseurl }}{{ item.url }}">
-        <img src="{{ site.baseurl }}{{ item.pic-url }}" alt="{{ item.title }}">
-        <h4>{{ item.type }}</h4>
-        <p>${{ item.price }}</p>
-      </a>
-    </div>
-    {% endif %}
+      {% if item.main %}
+        <div class="shop-item">
+          <div>
+            <a href="{{ site.baseurl }}{{ item.url }}">
+              <img src="{{ site.baseurl }}{{ item.pic-url }}" alt="{{ item.title }}">
+            </a>
+          </div>
+          <div>
+            <a href="{{ site.baseurl }}{{ item.url }}">
+              <h4>{{ item.type }}</h4>
+              <p>${{ item.price }}</p>
+            </a>
+          </div>
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
 </div>
