@@ -97,9 +97,10 @@
 /*CATEGORY*/
 .category__links {
   /*background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(/img/knuckle.jpg);*/
-  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/knuckle.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/skateboarder.jpg);
   justify-content: center;
   flex-direction: column;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 260px;

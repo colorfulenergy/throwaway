@@ -14,10 +14,10 @@ layout: default
           Made <br>
           For <br>
           The <br>
-          <span>Nibba</span>
+          <span>People</span>
         </h3>
         <p>
-          <a href="https://colorlessenergy.github.io" class="button">Giv Me Money</a>
+          <a href="{{ site.baseurl }}/mens-shop.html" class="button">Shop</a>
         </p>
       </div>
     </div>
@@ -62,13 +62,15 @@ layout: default
       </div>
       <div class="blog__container">
         {% for post in site.categories['blog'] %}
-          <div>
-            <img src="{{site.baseurl}}/img/{{post.imgSource}}" alt="{{post.imgAlt}}">
-            <p>{{post.meta}}</p>
-            <div class="blog__btn">
-              <a href="{{post.source}}">READ MORE</a>
+            <div>
+              <a href="{{ post.url }}">
+                <img src="{{site.baseurl}}/img/{{post.imgSource}}" alt="{{post.imgAlt}}">
+                <p>{{post.meta}}</p>
+                <div class="blog__btn">
+                  <a href="{{post.source}}">READ MORE</a>
+                </div>
+              </a>
             </div>
-          </div>
         {% endfor %}
       </div>
       <div class="blog__button">
