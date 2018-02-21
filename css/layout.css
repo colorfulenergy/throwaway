@@ -1,5 +1,16 @@
 ---
 ---
+/*CONTAINER STYLES*/
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1226px;
+}
+
+.flex-grow {
+  flex: 2;
+}
 
 /*HEADER*/
 .header__hero {
@@ -180,13 +191,4 @@
       flex-direction: column;
       margin-left: 20px;
     }
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-grow {
-  flex: 2;
 }
