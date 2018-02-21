@@ -56,6 +56,11 @@ a.button {
 /*SHOP*/
 /*BLOG*/
 /*.shop,*/
+.blog,
+.flex-grow {
+  background-color: #F1F2ED;
+}
+
 .blog__container,
 .category,
 .blog {
