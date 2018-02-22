@@ -64,10 +64,10 @@ layout: default
         {% for post in site.categories['blog'] %}
             <div>
               <a href="{{ post.url }}">
-                <img src="{{site.baseurl}}/img/{{post.imgSource}}" alt="{{post.imgAlt}}">
+                <img src="{{site.baseurl}}{{post.imgSource}}" alt="{{post.imgAlt}}">
                 <p>{{post.meta}}</p>
                 <div class="blog__btn">
-                  <a href="{{post.source}}">READ MORE</a>
+                  <a>READ MORE</a>
                 </div>
               </a>
             </div>

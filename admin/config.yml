@@ -148,3 +148,17 @@ collections:
       - {label: "the products type", name: "type", widget: "string"}
       - {label: "the products layout", name: "layout", widget: "hidden", default: "product-varieties"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
+
+  - name: "post" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title of blog post", name: "title", widget: "string"}
+      - {label: "information about blog post", name: "meta", widget: "text"}
+      - {label: "image for blog post", name: "imgSource", widget: "image"}
+      - {label: "info about image", name: "imgAlt", widget: "string"}
+      - {label: "categories", name: "categories", widget: "hidden", default: "blog"}
+      - {label: "Body", name: "body", widget: "markdown"}
