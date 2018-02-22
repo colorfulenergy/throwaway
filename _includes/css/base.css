@@ -71,6 +71,10 @@ main img {
   width: 100%;
 }
 
+button {
+    display: none;
+}
+
 /*FOOTER*/
 footer {
   background-color: #191919;
