@@ -262,9 +262,19 @@ a.button {
 }
 
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
   .nav > div,
   .nav nav {
     margin: 0;
+  }
+  .blog__center {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .blog__center {
+    max-width: 100%;
+    border: none;
   }
 }
