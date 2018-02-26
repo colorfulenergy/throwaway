@@ -1,20 +1,29 @@
 ---
 ---
+
+/*maximum jank*/
+p {
+  color: #000;
+}
+
 /*CONTAINER STYLES*/
-.flex-container {
+.container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   max-width: 1360px;
 }
 
-.flex-grow {
+.container__content {
   flex: 2;
 }
 
 /*HEADER*/
 .header__hero {
-  background-image: url({{site.baseurl}}/img/wigga-1.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)), url({{ site.baseurl }}/img/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 420px;
 }
 
@@ -49,7 +58,7 @@
 }
 
 .nav__responsive a {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 
@@ -102,11 +111,6 @@
 .category__container > div {
   width: 30%;
 }
-
-/*.shop,
-.blog__container {
-  justify-content: space-between;
-}*/
 
 /*CATEGORY*/
 .category__links {

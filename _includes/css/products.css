@@ -74,16 +74,8 @@
   margin-right: 10px;
 }
 
-/*.variety-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-align: center;
-}*/
-
 .variety-list a {
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 

@@ -16,7 +16,8 @@ header {
 }
 
 header h4 {
-  margin: 0 10px;
+  margin: 0;
+  margin-left: 10px;
 }
 
 h3 {
@@ -57,7 +58,7 @@ nav ul:last-of-type {
 }
 
 nav ul a, .sub-nav a{
-  color: black;
+  color: #000;
   text-decoration: none;
 }
 

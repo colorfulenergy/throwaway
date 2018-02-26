@@ -1,8 +1,8 @@
 /*CART*/
 .cart {
-  background-color: red;
+  background-color: #f00;
 
-  color: black;
+  color: #000;
   position: fixed;
   right: 0;
   top: 25%;
@@ -12,10 +12,17 @@
 }
 
 .cart:hover {
-  color: white;
+  color: #fff;
 }
 
 /*HEADER*/
+.header__h3 {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  font-weight: normal;
+  padding: 15px;
+}
 
 .nav {
   display: flex;
@@ -43,21 +50,19 @@
   transition: transform 0.5s;
 }
 
-a.button {
-  background-color: red;
-  border: 1px solid red;
+.header__button {
+  background-color: #f00;
+  border: 1px solid #f00;
   border-radius: 5px;
-  color: white;
+  color: #fff;
   display: inline-block;
-  padding: 10px 5px;
+  padding: 15px 10px;
   text-decoration: none;
 }
 
-/*SHOP*/
-/*BLOG*/
-/*.shop,*/
+/*BLOG STYLES*/
 .blog,
-.flex-grow {
+.container__content {
   background-color: #F1F2ED;
 }
 
@@ -66,12 +71,6 @@ a.button {
 .blog {
   padding: 30px 0;
 }
-
-/*
-.shop p {
-  margin: 10px 20px;
-}
-*/
 
 .active {
     display: block;
@@ -128,8 +127,13 @@ a.button {
 
 .category__links a {
   color: #85bee3;
-  /*line-height: 1;*/
+  line-height: 1;
   text-decoration: none;
+}
+
+.header__button:hover,
+.category__links a:hover {
+  text-decoration: underline;
 }
 
 /*BLOG*/
@@ -272,9 +276,13 @@ a.button {
   }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 400px) {
   .blog__center {
     max-width: 100%;
     border: none;
+  }
+
+  header h4 {
+    margin: 0;
   }
 }
